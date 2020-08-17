@@ -170,7 +170,7 @@
     </Compile>
     <Compile Include="Models\Bet\BetModel.cs" />
     <Compile Include="Models\Bet\CreationBetModel.cs" />
-    <Compile Include="Models\Roulette\CreationRouletteModel.cs" />
+    <Compile Include="Models\Roulette\CreateRouletteModel.cs" />
     <Compile Include="Models\Roulette\RouletteModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

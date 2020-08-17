@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DAL.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,9 @@ namespace DAL.Interfaces
 {
     public interface IRouletteRepository : IDisposable
     {
+        Roulettes GetRoulette(int roulette_Id);
+        Roulettes CreateRoulette(Roulettes roulette);
+        bool OpeningRoulette(Roulettes roulette);
         void Save();
     }
 }

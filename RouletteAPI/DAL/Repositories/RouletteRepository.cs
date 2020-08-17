@@ -1,7 +1,10 @@
 ﻿using DAL.Context;
+using DAL.Entities;
 using DAL.Interfaces;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
+using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,12 +20,54 @@ namespace DAL.Repositories
         {
             this.context = context;
         }
+        public Roulettes GetRoulette(int roulette_Id)
+        {
+            try
+            {
+                return context.Roulettes.Find(roulette_Id);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public Roulettes CreateRoulette(Roulettes roulette)
+        {
+            try
+            {
+                return context.Roulettes.Add(roulette);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public bool OpeningRoulette(Roulettes roulette)
+        {
+            try
+            {
+                context.Entry(roulette).State = EntityState.Modified;
 
-
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+                throw ex;
+            }
+        }
 
         public void Save()
         {
-            context.SaveChanges();
+            try
+            {
+                context.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
         }
         protected virtual void Dispose(bool disposing)
         {

@@ -51,6 +51,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\Roulette\CreationRouletteModel.cs" />
+    <Compile Include="Models\Roulette\RouletteModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RouletteBLL.cs" />
   </ItemGroup>
@@ -63,6 +65,9 @@
       <Project>{F8725CFB-1292-4851-B09D-D610D288A72A}</Project>
       <Name>DAL</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\Bet\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
