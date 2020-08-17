@@ -82,7 +82,6 @@ C:\Users\steve\Documents\ProyectosSteven\RouletteAPI\RouletteAPI\RouletteAPI\Rou
 C:\Users\steve\Documents\ProyectosSteven\RouletteAPI\RouletteAPI\RouletteAPI\RouletteAPI\bin\System.Web.WebPages.Razor.xml
 C:\Users\steve\Documents\ProyectosSteven\RouletteAPI\RouletteAPI\RouletteAPI\RouletteAPI\bin\Antlr3.Runtime.pdb
 C:\Users\steve\Documents\ProyectosSteven\RouletteAPI\RouletteAPI\RouletteAPI\RouletteAPI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\steve\Documents\ProyectosSteven\RouletteAPI\RouletteAPI\RouletteAPI\RouletteAPI\obj\Debug\RouletteAPI.csprojAssemblyReference.cache
 C:\Users\steve\Documents\ProyectosSteven\RouletteAPI\RouletteAPI\RouletteAPI\RouletteAPI\obj\Debug\RouletteAPI.csproj.CoreCompileInputs.cache
 C:\Users\steve\Documents\ProyectosSteven\RouletteAPI\RouletteAPI\RouletteAPI\RouletteAPI\obj\Debug\RouletteAPI.csproj.CopyComplete
 C:\Users\steve\Documents\ProyectosSteven\RouletteAPI\RouletteAPI\RouletteAPI\RouletteAPI\obj\Debug\RouletteAPI.dll

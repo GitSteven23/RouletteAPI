@@ -5,7 +5,6 @@ C:\Users\steve\Documents\ProyectosSteven\RouletteAPI\RouletteAPI\RouletteAPI\DAL
 C:\Users\steve\Documents\ProyectosSteven\RouletteAPI\RouletteAPI\RouletteAPI\DAL\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\steve\Documents\ProyectosSteven\RouletteAPI\RouletteAPI\RouletteAPI\DAL\bin\Debug\EntityFramework.xml
 C:\Users\steve\Documents\ProyectosSteven\RouletteAPI\RouletteAPI\RouletteAPI\DAL\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\steve\Documents\ProyectosSteven\RouletteAPI\RouletteAPI\RouletteAPI\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
 C:\Users\steve\Documents\ProyectosSteven\RouletteAPI\RouletteAPI\RouletteAPI\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
 C:\Users\steve\Documents\ProyectosSteven\RouletteAPI\RouletteAPI\RouletteAPI\DAL\obj\Debug\DAL.csproj.CopyComplete
 C:\Users\steve\Documents\ProyectosSteven\RouletteAPI\RouletteAPI\RouletteAPI\DAL\obj\Debug\DAL.dll
