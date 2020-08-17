@@ -1,4 +1,7 @@
-﻿using System;
+﻿using BLL;
+using DAL.Context;
+using Microsoft.Ajax.Utilities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -9,6 +12,12 @@ namespace RouletteAPI.Controllers
 {
     public class RouletteController : ApiController
     {
+        private RouletteBLL rouletteBLL;        
+
+        public RouletteController(RouletteBLL rouletteBLL)
+        {
+            this.rouletteBLL = rouletteBLL;
+        }
 
     }
 }
