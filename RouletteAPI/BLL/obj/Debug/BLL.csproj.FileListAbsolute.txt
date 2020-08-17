@@ -1,0 +1,12 @@
+C:\Users\steve\Documents\ProyectosSteven\RouletteAPI\RouletteAPI\RouletteAPI\BLL\bin\Debug\BLL.dll.config
+C:\Users\steve\Documents\ProyectosSteven\RouletteAPI\RouletteAPI\RouletteAPI\BLL\bin\Debug\BLL.dll
+C:\Users\steve\Documents\ProyectosSteven\RouletteAPI\RouletteAPI\RouletteAPI\BLL\bin\Debug\BLL.pdb
+C:\Users\steve\Documents\ProyectosSteven\RouletteAPI\RouletteAPI\RouletteAPI\BLL\bin\Debug\EntityFramework.dll
+C:\Users\steve\Documents\ProyectosSteven\RouletteAPI\RouletteAPI\RouletteAPI\BLL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\steve\Documents\ProyectosSteven\RouletteAPI\RouletteAPI\RouletteAPI\BLL\bin\Debug\EntityFramework.xml
+C:\Users\steve\Documents\ProyectosSteven\RouletteAPI\RouletteAPI\RouletteAPI\BLL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\steve\Documents\ProyectosSteven\RouletteAPI\RouletteAPI\RouletteAPI\BLL\obj\Debug\BLL.csprojAssemblyReference.cache
+C:\Users\steve\Documents\ProyectosSteven\RouletteAPI\RouletteAPI\RouletteAPI\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+C:\Users\steve\Documents\ProyectosSteven\RouletteAPI\RouletteAPI\RouletteAPI\BLL\obj\Debug\BLL.csproj.CopyComplete
+C:\Users\steve\Documents\ProyectosSteven\RouletteAPI\RouletteAPI\RouletteAPI\BLL\obj\Debug\BLL.dll
+C:\Users\steve\Documents\ProyectosSteven\RouletteAPI\RouletteAPI\RouletteAPI\BLL\obj\Debug\BLL.pdb

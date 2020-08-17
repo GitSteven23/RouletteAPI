@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.30330.147
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RouletteAPI", "RouletteAPI\RouletteAPI.csproj", "{C42BFFA5-FFD1-494D-A86C-A14F84665D81}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "BLL\BLL.csproj", "{6AA8065D-0E58-4E27-BBCF-1941C4B32935}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{F8725CFB-1292-4851-B09D-D610D288A72A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{C42BFFA5-FFD1-494D-A86C-A14F84665D81}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C42BFFA5-FFD1-494D-A86C-A14F84665D81}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C42BFFA5-FFD1-494D-A86C-A14F84665D81}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6AA8065D-0E58-4E27-BBCF-1941C4B32935}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AA8065D-0E58-4E27-BBCF-1941C4B32935}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AA8065D-0E58-4E27-BBCF-1941C4B32935}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AA8065D-0E58-4E27-BBCF-1941C4B32935}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8725CFB-1292-4851-B09D-D610D288A72A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8725CFB-1292-4851-B09D-D610D288A72A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8725CFB-1292-4851-B09D-D610D288A72A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8725CFB-1292-4851-B09D-D610D288A72A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
