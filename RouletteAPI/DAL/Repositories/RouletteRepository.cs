@@ -12,7 +12,6 @@ namespace DAL.Repositories
     {
         private RouletteContext context;
         private bool disposed = false;
-
         public RouletteRepository(RouletteContext context)
         {
             this.context = context;

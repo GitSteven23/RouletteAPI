@@ -1,3 +1,5 @@
+C:\Users\steve\Documents\ProyectosSteven\RouletteAPI\RouletteAPI\RouletteAPI\RouletteAPI\bin\Newtonsoft.Json.dll
+C:\Users\steve\Documents\ProyectosSteven\RouletteAPI\RouletteAPI\RouletteAPI\RouletteAPI\bin\Newtonsoft.Json.xml
 C:\Users\steve\Documents\ProyectosSteven\RouletteAPI\RouletteAPI\RouletteAPI\RouletteAPI\bin\RouletteAPI.dll.config
 C:\Users\steve\Documents\ProyectosSteven\RouletteAPI\RouletteAPI\RouletteAPI\RouletteAPI\bin\RouletteAPI.dll
 C:\Users\steve\Documents\ProyectosSteven\RouletteAPI\RouletteAPI\RouletteAPI\RouletteAPI\bin\RouletteAPI.pdb
@@ -57,7 +59,6 @@ C:\Users\steve\Documents\ProyectosSteven\RouletteAPI\RouletteAPI\RouletteAPI\Rou
 C:\Users\steve\Documents\ProyectosSteven\RouletteAPI\RouletteAPI\RouletteAPI\RouletteAPI\bin\EntityFramework.SqlServer.dll
 C:\Users\steve\Documents\ProyectosSteven\RouletteAPI\RouletteAPI\RouletteAPI\RouletteAPI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\steve\Documents\ProyectosSteven\RouletteAPI\RouletteAPI\RouletteAPI\RouletteAPI\bin\Microsoft.Web.Infrastructure.dll
-C:\Users\steve\Documents\ProyectosSteven\RouletteAPI\RouletteAPI\RouletteAPI\RouletteAPI\bin\Newtonsoft.Json.dll
 C:\Users\steve\Documents\ProyectosSteven\RouletteAPI\RouletteAPI\RouletteAPI\RouletteAPI\bin\System.Net.Http.Formatting.dll
 C:\Users\steve\Documents\ProyectosSteven\RouletteAPI\RouletteAPI\RouletteAPI\RouletteAPI\bin\System.Web.Helpers.dll
 C:\Users\steve\Documents\ProyectosSteven\RouletteAPI\RouletteAPI\RouletteAPI\RouletteAPI\bin\System.Web.Http.dll
@@ -75,7 +76,6 @@ C:\Users\steve\Documents\ProyectosSteven\RouletteAPI\RouletteAPI\RouletteAPI\Rou
 C:\Users\steve\Documents\ProyectosSteven\RouletteAPI\RouletteAPI\RouletteAPI\RouletteAPI\bin\DAL.dll.config
 C:\Users\steve\Documents\ProyectosSteven\RouletteAPI\RouletteAPI\RouletteAPI\RouletteAPI\bin\EntityFramework.xml
 C:\Users\steve\Documents\ProyectosSteven\RouletteAPI\RouletteAPI\RouletteAPI\RouletteAPI\bin\EntityFramework.SqlServer.xml
-C:\Users\steve\Documents\ProyectosSteven\RouletteAPI\RouletteAPI\RouletteAPI\RouletteAPI\bin\Newtonsoft.Json.xml
 C:\Users\steve\Documents\ProyectosSteven\RouletteAPI\RouletteAPI\RouletteAPI\RouletteAPI\bin\System.Net.Http.Formatting.xml
 C:\Users\steve\Documents\ProyectosSteven\RouletteAPI\RouletteAPI\RouletteAPI\RouletteAPI\bin\System.Web.Helpers.xml
 C:\Users\steve\Documents\ProyectosSteven\RouletteAPI\RouletteAPI\RouletteAPI\RouletteAPI\bin\System.Web.Http.xml

@@ -21,7 +21,6 @@ namespace BLL
         {
             this.rouletteRepository = rouletteRepository;
         }
-
         public RouletteModel CreateRoulette(CreationRouletteModel createRoulette)
         {
             try

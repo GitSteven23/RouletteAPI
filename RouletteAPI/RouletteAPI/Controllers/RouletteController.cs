@@ -10,7 +10,6 @@ namespace RouletteAPI.Controllers
     public class RouletteController : ApiController
     {
         private RouletteBLL rouletteBLL;
-
         public RouletteController()
         {
             this.rouletteBLL = new RouletteBLL();
@@ -19,20 +18,24 @@ namespace RouletteAPI.Controllers
         {
             this.rouletteBLL = rouletteBLL;
         }
-
         [HttpPost]
         [Route("api/CreateRoulette")]
         public IHttpActionResult CreateRoulette([FromBody] CreationRouletteModel createRoulette)
         {
             try
             {
-                RouletteModel rouletteModel = rouletteBLL.CreateRoulette(createRoulette);
-                if (rouletteModel == null)
+                if (ModelState.IsValid)
                 {
-                    return NotFound();
+                    RouletteModel rouletteModel = rouletteBLL.CreateRoulette(createRoulette);
+                    if (rouletteModel == null)
+                    {
+                        return NotFound();
+                    }
+
+                    return Ok(rouletteModel.Roulette_ID);
                 }
 
-                return Ok(rouletteModel.Roulette_ID);
+                return BadRequest(ModelState);
             }
             catch (Exception ex)
             {
@@ -74,7 +77,6 @@ namespace RouletteAPI.Controllers
 
                     return Ok(betModel);
                 }
-
                 return BadRequest(ModelState);
             }
             catch (Exception ex)
@@ -93,7 +95,6 @@ namespace RouletteAPI.Controllers
                 {
                     return NotFound();
                 }
-
                 return Ok(betsRoulette);
             }
             catch (Exception ex)
@@ -111,7 +112,6 @@ namespace RouletteAPI.Controllers
                 {
                     return NotFound();
                 }
-
                 return Ok(roulettes);
             }
             catch (Exception ex)
