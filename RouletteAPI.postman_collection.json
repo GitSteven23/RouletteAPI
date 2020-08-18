@@ -1,0 +1,162 @@
+{
+	"info": {
+		"_postman_id": "e0cd20f4-7ec1-4c11-a110-16c0ee4323f4",
+		"name": "RouletteAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://localhost:44332/api/CreateRoulette",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"Name\": \"Ruleta de juego 3\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44332/api/CreateRoulette",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44332",
+					"path": [
+						"api",
+						"CreateRoulette"
+					]
+				},
+				"description": "POST CreateRoulette"
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44332/api/OpeningRoulette?rouletteId=2",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44332/api/OpeningRoulette?rouletteId=2",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44332",
+					"path": [
+						"api",
+						"OpeningRoulette"
+					],
+					"query": [
+						{
+							"key": "rouletteId",
+							"value": "2"
+						}
+					]
+				},
+				"description": "PUT OpeningRoulette"
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44332/api/CreateBet",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"Roulette_ID\": 2,\r\n  \"User_ID\": \"B4D72E21-2571-49C3-9232-D4FB7BE9632D\",\r\n  \"Number\": 33,\r\n  \"Color\": \"\",\r\n  \"Money\": 8000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44332/api/CreateBet",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44332",
+					"path": [
+						"api",
+						"CreateBet"
+					]
+				},
+				"description": "POST CreateBet"
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44332/api/ClosingRoulette?rouletteId=2",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44332/api/ClosingRoulette?rouletteId=2",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44332",
+					"path": [
+						"api",
+						"ClosingRoulette"
+					],
+					"query": [
+						{
+							"key": "rouletteId",
+							"value": "2"
+						}
+					]
+				},
+				"description": "PUT Closing Roulette"
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44332/api/Roulette",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44332/api/Roulette",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44332",
+					"path": [
+						"api",
+						"Roulette"
+					]
+				},
+				"description": "GET AllRoulettes"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
