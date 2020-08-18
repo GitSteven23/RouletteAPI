@@ -7,8 +7,6 @@ using DAL.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BLL
 {
@@ -18,7 +16,7 @@ namespace BLL
         public RouletteBLL()
         {
             this.rouletteRepository = new RouletteRepository(new RouletteContext());
-        }      
+        }
         public RouletteBLL(IRouletteRepository rouletteRepository)
         {
             this.rouletteRepository = rouletteRepository;
@@ -40,7 +38,7 @@ namespace BLL
                 RouletteModel responseCreateRoulette = new RouletteModel()
                 {
                     Roulette_ID = responseRoulette.Roulette_ID,
-                    Name =  responseRoulette.Name
+                    Name = responseRoulette.Name
                 };
 
                 return responseCreateRoulette;
@@ -65,7 +63,7 @@ namespace BLL
                 {
                     return "¡Operación exitosa!";
                 }
-                else 
+                else
                 {
                     return "¡Operación denegada!";
                 }
@@ -87,7 +85,7 @@ namespace BLL
                         Roulette_ID = createBet.Roulette_ID,
                         User_ID = createBet.User_ID,
                         Number = createBet.Number,
-                        Color = createBet.Color,
+                        Color = createBet.Color == "" ? "No aplica" : createBet.Color,
                         Money = createBet.Money,
                         State = true,
                         Creation_Date = DateTime.UtcNow.ToLocalTime(),
@@ -109,11 +107,69 @@ namespace BLL
 
                     return betModelResponse;
                 }
-                else 
+                else
                 {
                     BetModel modelEmpty = new BetModel();
                     return modelEmpty;
-                }               
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public List<BetModel> ClosingRoulette(int roulette_Id)
+        {
+            try
+            {
+                Roulettes rouletteExist = rouletteRepository.GetRoulette(roulette_Id);
+                rouletteExist.State = false;
+                rouletteExist.Closing_Date = DateTime.UtcNow.ToLocalTime();
+
+                bool updateRoulette = rouletteRepository.ClosingRoulette(rouletteExist);
+                rouletteRepository.Save();
+
+                Roulettes updatedRoulette = rouletteRepository.GetRoulette(roulette_Id);
+                List<Bets> betsRoulette = rouletteRepository.GetBetsByRouletteId(updatedRoulette);
+
+                List<BetModel> betResponse = betsRoulette.Select(
+                    betModel => new BetModel
+                    {
+                        Bet_ID = betModel.Bet_ID,
+                        User_ID = betModel.User_ID,
+                        Roulette_ID = betModel.Roulette_ID,
+                        Number = betModel.Number == 0 ? 0 : betModel.Number,
+                        Color = betModel.Color == "" ? "No aplica" : betModel.Color,
+                        Money = betModel.Money,
+                        State = betModel.State == true ? "Activa" : "Vencida",
+                        Creation_Date = betModel.Creation_Date
+                    }).ToList();
+
+                return betResponse;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+        }
+        public List<RouletteModel> GetRoulettes()
+        {
+            try
+            {
+                List<Roulettes> roulettes = rouletteRepository.GetRoulettes();
+
+                List<RouletteModel> roulettesResponse = roulettes.Select(
+                    rouletteModel => new RouletteModel
+                    {
+                        Roulette_ID = rouletteModel.Roulette_ID,
+                        Name = rouletteModel.Name,
+                        State = rouletteModel.State == true ? "Abierta" : "Cerrada",
+                        Opening_Date = rouletteModel.Opening_Date,
+                        Closing_Date = rouletteModel.Closing_Date
+                    }).ToList();
+
+                return roulettesResponse;
             }
             catch (Exception ex)
             {

@@ -4,10 +4,7 @@ using DAL.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
-using System.Data.Entity.Migrations;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DAL.Repositories
 {
@@ -20,11 +17,11 @@ namespace DAL.Repositories
         {
             this.context = context;
         }
-        public Roulettes GetRoulette(int roulette_Id)
+        public Roulettes GetRoulette(int rouletteId)
         {
             try
             {
-                return context.Roulettes.Find(roulette_Id);
+                return context.Roulettes.Find(rouletteId);
             }
             catch (Exception ex)
             {
@@ -67,9 +64,45 @@ namespace DAL.Repositories
                 throw ex;
             }
         }
+        public bool ClosingRoulette(Roulettes roulette)
+        {
+            try
+            {
+                context.Entry(roulette).State = EntityState.Modified;
 
-
-
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+                throw ex;
+            }
+        }
+        public List<Bets> GetBetsByRouletteId(Roulettes roulette)
+        {
+            try
+            {
+                List<Bets> bets = context.Bets.Where(b => b.Roulette_ID == roulette.Roulette_ID
+                                                       && (b.Creation_Date >= roulette.Opening_Date && b.Creation_Date <= roulette.Closing_Date)
+                                                       ).ToList();
+                return bets;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public List<Roulettes> GetRoulettes()
+        {
+            try
+            {
+                return context.Roulettes.ToList();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
         public Users GetUser(Guid user_Id)
         {
             try

@@ -1,13 +1,8 @@
 ﻿using BLL;
 using BLL.Models.Bet;
 using BLL.Models.Roulette;
-using DAL.Context;
-using Microsoft.Ajax.Utilities;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
 using System.Web.Http;
 
 namespace RouletteAPI.Controllers
@@ -41,10 +36,11 @@ namespace RouletteAPI.Controllers
             }
             catch (Exception ex)
             {
-                throw ex;                
+                throw ex;
             }
         }
         [HttpPut]
+        [Route("api/OpeningRoulette")]
         public IHttpActionResult OpeningRoulette(int rouletteId)
         {
             try
@@ -68,19 +64,60 @@ namespace RouletteAPI.Controllers
         {
             try
             {
-                BetModel betModel = rouletteBLL.CreateBet(createBet);
-                if (betModel == null)
+                if (ModelState.IsValid)
                 {
-                    return NotFound();
+                    BetModel betModel = rouletteBLL.CreateBet(createBet);
+                    if (betModel == null)
+                    {
+                        return NotFound();
+                    }
+
+                    return Ok(betModel);
                 }
 
-                return Ok(betModel);
+                return BadRequest(ModelState);
             }
             catch (Exception ex)
             {
                 throw ex;
             }
         }
+        [HttpPut]
+        [Route("api/ClosingRoulette")]
+        public IHttpActionResult ClosingRoulette(int rouletteId)
+        {
+            try
+            {
+                List<BetModel> betsRoulette = rouletteBLL.ClosingRoulette(rouletteId);
+                if (betsRoulette == null)
+                {
+                    return NotFound();
+                }
 
+                return Ok(betsRoulette);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        [HttpGet]
+        public IHttpActionResult GetRoulettes()
+        {
+            try
+            {
+                List<RouletteModel> roulettes = rouletteBLL.GetRoulettes();
+                if (roulettes == null)
+                {
+                    return NotFound();
+                }
+
+                return Ok(roulettes);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }
