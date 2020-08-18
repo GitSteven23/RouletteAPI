@@ -56,7 +56,31 @@ namespace DAL.Repositories
                 throw ex;
             }
         }
+        public Bets CreateBet(Bets bet)
+        {
+            try
+            {
+                return context.Bets.Add(bet);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
 
+
+
+        public Users GetUser(Guid user_Id)
+        {
+            try
+            {
+                return context.Users.Find(user_Id);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
         public void Save()
         {
             try

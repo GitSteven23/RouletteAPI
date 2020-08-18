@@ -12,6 +12,8 @@ namespace DAL.Interfaces
         Roulettes GetRoulette(int roulette_Id);
         Roulettes CreateRoulette(Roulettes roulette);
         bool OpeningRoulette(Roulettes roulette);
+        Bets CreateBet(Bets bet);
+        Users GetUser(Guid user_Id);
         void Save();
     }
 }

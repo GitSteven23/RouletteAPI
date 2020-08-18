@@ -1,4 +1,5 @@
 ﻿using BLL;
+using BLL.Models.Bet;
 using BLL.Models.Roulette;
 using DAL.Context;
 using Microsoft.Ajax.Utilities;
@@ -25,11 +26,12 @@ namespace RouletteAPI.Controllers
         }
 
         [HttpPost]
-        public IHttpActionResult CreateRoulette([FromBody] CreationRouletteModel rouletteCreate)
+        [Route("api/CreateRoulette")]
+        public IHttpActionResult CreateRoulette([FromBody] CreationRouletteModel createRoulette)
         {
             try
             {
-                CreationRouletteModel rouletteModel = rouletteBLL.CreateRoulette(rouletteCreate);
+                RouletteModel rouletteModel = rouletteBLL.CreateRoulette(createRoulette);
                 if (rouletteModel == null)
                 {
                     return NotFound();
@@ -42,7 +44,6 @@ namespace RouletteAPI.Controllers
                 throw ex;                
             }
         }
-
         [HttpPut]
         public IHttpActionResult OpeningRoulette(int rouletteId)
         {
@@ -55,6 +56,25 @@ namespace RouletteAPI.Controllers
                 }
 
                 return Ok(openingRoulette);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        [HttpPost]
+        [Route("api/CreateBet")]
+        public IHttpActionResult CreateBet([FromBody] CreateBetModel createBet)
+        {
+            try
+            {
+                BetModel betModel = rouletteBLL.CreateBet(createBet);
+                if (betModel == null)
+                {
+                    return NotFound();
+                }
+
+                return Ok(betModel);
             }
             catch (Exception ex)
             {

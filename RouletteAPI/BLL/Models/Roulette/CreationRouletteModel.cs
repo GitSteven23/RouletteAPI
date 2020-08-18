@@ -8,8 +8,7 @@ using System.Threading.Tasks;
 namespace BLL.Models.Roulette
 {
     public class CreationRouletteModel
-    {
-        public int Roulette_ID { get; set; }
+    {        
         [Required]
         [StringLength(50)]
         public string Name { get; set; }
